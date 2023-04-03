@@ -1,0 +1,70 @@
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 20px;
+}
+
+.security-details {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.security-details-row {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+label {
+  text-align: left;
+  color: #21092f;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+input {
+  text-align: left;
+  border-radius: 8px;
+  border: 1px solid #dfdee0;
+  font-size: 18px;
+  font-family: "Space Grotesk", sans-serif;
+  height: 45px;
+}
+
+input::placeholder {
+  color: #dfdee0;
+}
+
+.cardholder-name {
+  margin-top: 90px;
+}
+
+.name,
+.number-input {
+  width: 327px;
+  margin-bottom: 10px;
+  padding-left: 5px;
+}
+
+.date-input {
+  width: 72px;
+  margin-right: 10px;
+  padding-left: 5px;
+}
+
+.cvc-input {
+  width: 144px;
+  padding-left: 5px;
+}
+
+.confirm-btn {
+  background-color: #21092f;
+  font-size: 18px;
+  color: white;
+  width: 335px;
+  height: 53px;
+}

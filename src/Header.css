@@ -1,0 +1,108 @@
+.header {
+  height: 240px;
+  width: 375px;
+  background: linear-gradient(to right, #21092f, #610595, #21092f);
+}
+
+.stacked-cards {
+  height: 251px;
+  width: 343px;
+  position: relative;
+}
+
+.card-front,
+.card-back {
+  height: 157px;
+  width: 286px;
+  border-radius: 6px;
+  position: absolute;
+}
+
+.card-front {
+  left: 15px;
+  bottom: -30px;
+  z-index: 2;
+  background: linear-gradient(to right, #8773ff, #d53aff, #ff834a, #610595);
+  box-shadow: 0 20px 10px lightgrey;
+}
+
+.card-back {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 30px;
+  left: 75px;
+  z-index: 1;
+  background: linear-gradient(to right, #ffffff, #d2d3d9);
+}
+
+.mag-strip {
+  height: 35px;
+  width: 286px;
+  background-color: #2f2f2f;
+  margin-top: 15px;
+}
+
+.cvc-panel {
+  height: 30px;
+  width: 231px;
+  background-color: #adb5be;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.cvc-code {
+  color: white;
+  font-size: 9px;
+  margin-left: 205px;
+  letter-spacing: 1px;
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+}
+
+.card-logo {
+  height: 30px;
+  width: 30px;
+  background-color: white;
+  border-radius: 50%;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.card-logo-small {
+  height: 13px;
+  width: 13px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.cc-number,
+.cc-name,
+.cc-date {
+  color: white;
+}
+
+.cc-number {
+  font-size: 18px;
+  text-align: left;
+  margin-left: 20px;
+  letter-spacing: 2px;
+}
+
+.cc-name,
+.cc-date {
+  font-size: 9px;
+  margin-left: 20px;
+  margin-right: 20px;
+  letter-spacing: 2px;
+}
+
+.cc-name-date {
+  display: flex;
+  justify-content: space-between;
+}
