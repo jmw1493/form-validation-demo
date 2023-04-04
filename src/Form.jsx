@@ -20,9 +20,19 @@ const Form = (props) => {
           placeholder="e.g. Jane Appleseed"
           onChange={(event) => {
             props.setName(event.target.value);
+            if (!event.target.value) {
+              props.setErrorMessage("This field is required.");
+            } else {
+              props.setErrorMessage("");
+            }
           }}
-          required
+          // required
+          style={{ border: props.errorMessage ? "1px solid red" : "" }}
         />
+        {props.errorMessage && (
+          <div style={{ color: "red" }}>{props.errorMessage}</div>
+        )}
+        {/* <p className="name-alert">Can't be blank</p> */}
 
         <label htmlFor="number">CARD NUMBER</label>
         <input
@@ -35,6 +45,7 @@ const Form = (props) => {
           }}
           required
         />
+        {/* <p className="alert">Wrong format, numbers only</p> */}
 
         <div className="security-details">
           <div className="security-details-row">
@@ -50,6 +61,7 @@ const Form = (props) => {
               }}
               required
             />
+            {/* <p className="alert">Can't be blank</p> */}
           </div>
           <div className="security-details-row">
             <label htmlFor="expyear">(MM/YY)</label>
@@ -64,6 +76,7 @@ const Form = (props) => {
               }}
               required
             />
+            {/* <p className="alert">Can't be blank</p> */}
           </div>
           <div className="security-details-row">
             <label htmlFor="cvc">CVC</label>
@@ -78,6 +91,7 @@ const Form = (props) => {
               }}
               required
             />
+            {/* <p className="alert">Can't be blank</p> */}
           </div>
         </div>
 

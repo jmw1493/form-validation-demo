@@ -1,108 +1,72 @@
-.header {
-  height: 240px;
+.header-background-image {
+  z-index: 0;
   width: 375px;
-  background: linear-gradient(to right, #21092f, #610595, #21092f);
+  height: 240px;
 }
 
-.stacked-cards {
-  height: 251px;
-  width: 343px;
+.cards-div {
   position: relative;
 }
 
-.card-front,
-.card-back {
-  height: 157px;
-  width: 286px;
-  border-radius: 6px;
-  position: absolute;
-}
-
+.card-back,
 .card-front {
-  left: 15px;
-  bottom: -30px;
-  z-index: 2;
-  background: linear-gradient(to right, #8773ff, #d53aff, #ff834a, #610595);
-  box-shadow: 0 20px 10px lightgrey;
-}
-
-.card-back {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  top: 30px;
-  left: 75px;
-  z-index: 1;
-  background: linear-gradient(to right, #ffffff, #d2d3d9);
-}
-
-.mag-strip {
-  height: 35px;
   width: 286px;
-  background-color: #2f2f2f;
-  margin-top: 15px;
+  height: 157px;
 }
 
-.cvc-panel {
+.card-front-div {
+  z-index: 2;
+  position: absolute;
+  top: -126px;
+  left: 15px;
+}
+
+.card-logo {
+  z-index: 3;
+  background-color: red;
+  display: block;
+  width: 54px;
   height: 30px;
-  width: 231px;
-  background-color: #adb5be;
-  border-radius: 5px;
-  margin-top: 15px;
+  margin-left: 20px;
+  margin-top: -150px;
+}
+
+.cc-number {
+  color: white;
+  font-size: 18px;
+  text-align: left;
+  margin-left: 20px;
+  margin-top: 40px;
+  letter-spacing: 2px;
+}
+
+.date-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -15px;
+  margin-left: 20px;
+  margin-right: 25px;
+}
+
+.cc-name,
+.cc-date {
+  color: white;
+  font-size: 9px;
+}
+
+.card-back-div {
+  z-index: 1;
+  position: absolute;
+  top: -215px;
+  left: 75px;
 }
 
 .cvc-code {
+  z-index: 2;
   color: white;
   font-size: 9px;
   margin-left: 205px;
   letter-spacing: 1px;
-}
-
-.logos {
-  display: flex;
-  align-items: center;
-}
-
-.card-logo {
-  height: 30px;
-  width: 30px;
-  background-color: white;
-  border-radius: 50%;
-  margin-left: 20px;
-  margin-top: 20px;
-}
-
-.card-logo-small {
-  height: 13px;
-  width: 13px;
-  border: 1px solid white;
-  border-radius: 50%;
-  margin-left: 10px;
-  margin-top: 20px;
-}
-
-.cc-number,
-.cc-name,
-.cc-date {
-  color: white;
-}
-
-.cc-number {
-  font-size: 18px;
-  text-align: left;
-  margin-left: 20px;
-  letter-spacing: 2px;
-}
-
-.cc-name,
-.cc-date {
-  font-size: 9px;
-  margin-left: 20px;
-  margin-right: 20px;
-  letter-spacing: 2px;
-}
-
-.cc-name-date {
-  display: flex;
-  justify-content: space-between;
+  margin-top: -95px;
+  margin-right: 5px;
 }

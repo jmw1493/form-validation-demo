@@ -33,6 +33,7 @@ input {
   font-size: 18px;
   font-family: "Space Grotesk", sans-serif;
   height: 45px;
+  margin-bottom: 10px;
 }
 
 input::placeholder {
@@ -46,8 +47,7 @@ input::placeholder {
 .name,
 .number-input {
   width: 327px;
-  margin-bottom: 10px;
-  padding-left: 5px;
+  padding-left: 10px;
 }
 
 .date-input {
@@ -58,7 +58,7 @@ input::placeholder {
 
 .cvc-input {
   width: 144px;
-  padding-left: 5px;
+  padding-left: 10px;
 }
 
 .confirm-btn {
@@ -67,4 +67,20 @@ input::placeholder {
   color: white;
   width: 335px;
   height: 53px;
+}
+
+.alert {
+  color: red;
+  font-size: 12px;
+  text-align: left;
+  margin: 0;
+  display: none;
+}
+
+.name-alert {
+  color: red;
+  font-size: 12px;
+  text-align: left;
+  margin-top: 0;
+  display: none;
 }
