@@ -11,6 +11,7 @@ const App = () => {
   const [year, setYear] = useState("");
   const [cvc, setCvc] = useState("");
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [errors, setErrors] = useState(new Set());
 
   return (
     <div className="container">
@@ -53,6 +54,8 @@ const App = () => {
             cvc={cvc}
             setCvc={setCvc}
             setFormSubmitted={setFormSubmitted}
+            errors={errors}
+            setErrors={setErrors}
           />
         </div>
       )}
