@@ -36,27 +36,32 @@ input {
   margin-bottom: 10px;
 }
 
+input:focus {
+  border-color: #338ba8;
+}
+
 input::placeholder {
   color: #dfdee0;
 }
 
 .cardholder-name {
-  margin-top: 90px;
+  margin-top: 65px;
 }
 
-.name,
-.number-input {
+#name,
+#number {
   width: 327px;
   padding-left: 10px;
 }
 
-.date-input {
+#month,
+#year {
   width: 72px;
   margin-right: 10px;
   padding-left: 5px;
 }
 
-.cvc-input {
+#cvc {
   width: 144px;
   padding-left: 10px;
 }
@@ -69,18 +74,18 @@ input::placeholder {
   height: 53px;
 }
 
-.alert {
-  color: red;
-  font-size: 12px;
-  text-align: left;
-  margin: 0;
-  display: none;
+.input-error {
+  border-color: #fc8181;
 }
 
-.name-alert {
-  color: red;
-  font-size: 12px;
+.error {
   text-align: left;
-  margin-top: 0;
-  display: none;
+  color: #fc8181;
+  font-size: 9px;
+  margin-top: -5px;
+  margin-bottom: 5px;
+}
+
+button:disabled {
+  opacity: 0.35;
 }

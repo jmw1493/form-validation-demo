@@ -16,16 +16,18 @@ const Header = (props) => {
       <div className="cards-div">
         <div className="card-back-div">
           <img className="card-back" src={CardBack} />
-          <p className="cvc-code">000</p>
+          <p className="cvc-code">{props.cvc}</p>
         </div>
 
         <div className="card-front-div">
           <img className="card-front" src={CardFront} />
           <img className="card-logo" src={CardLogo} />
-          <p className="cc-number">{props.number}</p>
+          <p className="card-number">{props.number}</p>
           <div className="date-info">
-            <p className="cc-name">{props.name.toUpperCase()}</p>
-            <p className="cc-date">{props.month + "/" + props.year}</p>
+            <p className="cc-name">{props.name}</p>
+            <div>
+              <p className="cc-date">{props.month && props.year ? props.month + "/" +props.year: null}</p>
+            </div>
           </div>
         </div>
       </div>

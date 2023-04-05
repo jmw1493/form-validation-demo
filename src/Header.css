@@ -31,7 +31,7 @@
   margin-top: -150px;
 }
 
-.cc-number {
+.card-number {
   color: white;
   font-size: 18px;
   text-align: left;
@@ -52,6 +52,7 @@
 .cc-date {
   color: white;
   font-size: 9px;
+  text-transform: uppercase;
 }
 
 .card-back-div {
