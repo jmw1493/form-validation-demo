@@ -3,11 +3,41 @@ import { Formik } from "formik";
 import "./Form.css";
 
 const Form = (props) => {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    props.setFormSubmitted(true);
+  const validate = () => {
+    let errors = new Set();
+    // props.name
+    if (!props.name.length) {
+      errors.add("name");
+    }
+    // props.number
+    if (!props.number.length) {
+      errors.add("number");
+    }
+    // props.month
+    if (!props.month.length) {
+      errors.add("month");
+    }
+    // props.year
+    if (!props.name.length) {
+      errors.add("name");
+    }
+    // props.cvc
+    if (!props.cvc.length) {
+      errors.add("cvc");
+    }
+    if (errors.size) {
+      props.setErrors(errors);
+      return false;
+    }
+    return true;
   };
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (validate()) props.setFormSubmitted(true);
+  };
+
+  console.log(props.errors);
   return (
     <div className="form-container">
       <form onSubmit={handleSubmit}>
@@ -23,6 +53,9 @@ const Form = (props) => {
             props.setName(event.target.value);
           }}
         />
+        {props.errors.has("name") && (
+          <p style={{ color: "red" }}>this is an error</p>
+        )}
 
         <label htmlFor="cardNumber">CARD NUMBER</label>
         <input
